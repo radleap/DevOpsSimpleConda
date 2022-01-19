@@ -10,7 +10,7 @@ SHELL ["conda", "run", "-n", "myJenkinsEnv", "/bin/bash", "-c"]
 
 # Demonstrate the environment is activated:
 RUN echo "Make sure flask is installed:"
-RUN python -c "import flask"
+RUN python -c "import requests"
 
 # The code to run when container is started:
 COPY run.py .
