@@ -38,5 +38,8 @@ pipeline {
             always {
                 sh 'docker logout'
             }
+            always { 
+                cleanWs()
+        }
 	}
 }
