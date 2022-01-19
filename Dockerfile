@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3
+FROM continuumio/miniconda
 WORKDIR /app
 
 # Create the environment:
