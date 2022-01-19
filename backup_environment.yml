@@ -2,5 +2,9 @@ name: myJenkinsEnv
 channels:
   - defaults
 dependencies:
+  - pandas
+  - numpy
+  - python=3.8
   - requests
+  - pip
 prefix: C:\Users\guy\.conda\envs\myJenkinsEnv
