@@ -36,10 +36,12 @@ pipeline {
     }
     	post {
             always {
+                echo 'Logging out of dockerhub'
                 sh 'docker logout'
-            }
-            always { 
+                echo 'Cleaning environment'
+                deleteDir()
                 cleanWs()
-        }
+
+            }
 	}
 }
