@@ -1,1 +1,1 @@
-This is a simple Jenkinsfile job
+This is a simple Jenkinsfile job for conda environments.

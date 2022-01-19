@@ -7,7 +7,7 @@ pipeline {
         stage("Building image") {
             steps {
                 sh """
-                    docker build -t $DOCKERHUB_CREDS_USR/hello_there:latest .
+                    docker build -t $DOCKERHUB_CREDS_USR/hello_python_conda:latest .
                 """
             }
         }
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Pushing to Dockerhub') {
             steps {
-                sh 'docker push $DOCKERHUB_CREDS_USR/hello_there:latest'
+                sh 'docker push $DOCKERHUB_CREDS_USR/hello_python_conda:latest'
             }
         }
         stage("Running") {
@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 sh """
-                    docker run --rm $DOCKERHUB_CREDS_USR/hello_there:latest
+                    docker run --rm $DOCKERHUB_CREDS_USR/hello_python_conda:latest
                 """
             }
         }
